@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg,#f3d9fa,#dbe4ff,#c5f6fa);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0 0; }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+/* Card wrapper */
+.journal-card {
+    position: relative;
+    width: 100%;
+    background: var(--pastel);
+    border-radius: 18px;
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,0.4);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: block;
+    overflow: visible; 
+}
+
+/* Hover aesthetic */
+.journal-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-preview {
+    padding-top: 8px;       
+    padding-right: 30px;    
+}
+
+/* TEXT PREVIEW FULL WIDTH */
+.card-preview p,
+.journal-card p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
+}
+
+/* When expanded */
+.journal-card.expanded {
+    background: #ffffffee;
+    cursor: default;
+    z-index: 2;
+}
+
+/* Full expanded content */
+.full-content {
+    margin-top: 12px;
+    font-size: 16px;
+    max-height: 420px;
+    overflow-y: auto;       /* scroll internal content if very long */
+    padding-right: 8px;
+}
+
+.full-content img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+/* CRUD BUTTONS */
+.card-actions {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.card-actions button {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-actions button:hover {
+    background: white;
+    transform: scale(1.08);
+}
