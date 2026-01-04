@@ -1,0 +1,131 @@
+/* Container with full background */
+.rituals-container {
+  width: 100vw;
+  height: 100vh;
+    background:  #e9a4de8b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1.2s ease, filter 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Smooth fade-in box */
+.fade-box {
+  animation: fadeIn 1.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Centered pastel glass-like box */
+.center-box {
+   background: rgba(237, 139, 139, 0.55);
+  backdrop-filter: blur(12px);
+  padding: 35px 45px;
+  border-radius: 25px;
+  text-align: center;
+  width: 480px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.question-text {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Buttons */
+.mood-buttons button,
+.ritual-list button,
+.next-btn,
+.back-btn {
+  background: #f3e8ff;
+  border: none;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.mood-buttons button:hover,
+.ritual-list button:hover,
+.next-btn:hover,
+.back-btn:hover {
+  background: #e9d6ff;
+  transform: scale(1.05);
+}
+
+.ritual-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.step-box {
+  margin-bottom: 20px;
+}
+
+.step-text {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+}
+
+.next-btn {
+  background: #d9e8ff;
+}
+
+.back-btn {
+  background: #ffe5e5;
+}
+
+/* Celebration */
+.celebration {
+  font-size: 2rem;
+  color: white;
+  background: rgba(255, 228, 255, 0.5);
+  padding: 30px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  animation: sparkle 1.4s ease infinite alternate;
+}
+
+@keyframes sparkle {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(1.05); opacity: 1; }
+}
+
+/* Favorite/star button */
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffb6c1; /* pastel pink */
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.3);
+}
+
+/* Filled favorite (if active) */
+.favorite-btn.active {
+  color: #ff69b4; /* brighter pink for filled */
+}
