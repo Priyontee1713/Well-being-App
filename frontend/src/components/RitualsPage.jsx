@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "./RitualsPage.css";
-import calmImg from "../../assets/calm.jpg";
-import happyImg from "../../assets/happy.jpg";
-import tiredImg from "../../assets/tired.jpg";
-import stressedImg from "../../assets/stressed.jpg";
+import calmImg from "../assets/calm.jpg";
+import happyImg from "../assets/happy.jpg";
+import tiredImg from "../assets/tired.jpg";
+import stressedImg from "../assets/stressed.jpg";
 
 export default function RitualsPage() {
   const [moods, setMoods] = useState([]);
