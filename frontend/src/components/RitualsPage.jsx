@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "./RitualsPage.css";
-import calmImg from "../assets/calm.jpg";
+/*import calmImg from "../assets/calm.jpg";
 import happyImg from "../assets/happy.jpg";
 import tiredImg from "../assets/tired.jpg";
-import stressedImg from "../assets/stressed.jpg";
+import stressedImg from "../assets/stressed.jpg";*/
 
 export default function RitualsPage() {
   const [moods, setMoods] = useState([]);
@@ -21,13 +21,18 @@ export default function RitualsPage() {
   const user = "demoUser"; 
 
   const BACKEND_URL = "http://localhost:5000";
-
-  const moodBackgrounds = {
+const moodBackgrounds = {
+  calm: "/calm.jpg",
+  happy: "/happy.jpg",
+  tired: "/tired.jpg",
+  stressed: "/stressed.jpg",
+};
+  /*const moodBackgrounds = {
     calm: calmImg,
     happy: happyImg,
     tired: tiredImg,
     stressed: stressedImg,
-  };
+  };*/
 
   // Fetch moods
   useEffect(() => {
@@ -154,3 +159,4 @@ export default function RitualsPage() {
     </div>
   );
 }
+
