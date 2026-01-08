@@ -1,0 +1,102 @@
+/* Container Layout */
+.desktop-home {
+  padding: 40px 5%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* SEARCH BAR: Increased writing space */
+.aesthetic-search-bar.standout-purple {
+  display: flex;
+  align-items: center;
+  background: rgba(30, 30, 60, 0.85) !important; 
+  border: 2px solid #a855f7 !important;
+  border-radius: 60px;
+  padding: 5px 10px 5px 25px;
+  width: 100%;
+  max-width: 850px; /* Wider bar */
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+.wide-input {
+  flex: 1; /* This expands the input area fully */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  height: 55px;
+}
+
+.vibrant-search-btn {
+  background: #a855f7;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 45px;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
+/* PAGINATION: Four Items Logic */
+.pagination-layout {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.paginated-viewport {
+  display: flex;
+  gap: 20px; /* Controlled gap */
+  overflow-x: hidden; /* Hides partial items */
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.music-card-quad {
+  /* Exactly 25% of the container minus the gap */
+  flex: 0 0 calc(25% - 15px); 
+  height: 100%;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card-artwork {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* SCROLL BUTTONS: High visibility outside the cards */
+.scroll-arrow-fixed {
+  background: #a855f7;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 3px solid white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 100;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.scroll-arrow-fixed.left { margin-right: 20px; }
+.scroll-arrow-fixed.right { margin-left: 20px; }

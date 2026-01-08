@@ -1,0 +1,140 @@
+.pc-timer-active-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/bg4.jpg'); /* Fixed background implementation */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.timer-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* INCREASED: Pushes the circle much higher up */
+  margin-top: -180px; 
+}
+
+.timer-inner-content {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-text-large {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #333;
+}
+
+.alarm-subtext {
+  font-size: 2.5rem; /* Slightly larger bell for better visibility */
+}
+
+/* Actions positioned to stay clear of the circle */
+.timer-actions {
+  display: flex;
+  gap: 25px;
+  position: absolute;
+  /* DECREASED: Pulls buttons lower to avoid touching the circle */
+  bottom: 130px; 
+}
+
+.timer-btn {
+  padding: 16px 50px;
+  border-radius: 35px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.timer-btn.cancel {
+  background: #ffffff;
+  color: #333;
+}
+
+.timer-btn.pause {
+  background: #B19CD9;
+  color: white;
+}
+
+/* Yellow Resume state as seen in your screenshot */
+.resume-active {
+  background: #ffcf4d !important;
+  color: #000 !important;
+}
+
+/* Keep your pulse animation for the Resume button */
+.resume-pulse {
+  background: #ffcf4d;
+  color: #000;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* --- NEW: ALARM NOTIFICATION DESIGN --- */
+
+/* The full-screen dark background that pops up */
+.alarm-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Always on top of everything */
+}
+
+/* The white box in the middle */
+.alarm-content {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(177, 156, 217, 0.5); /* Soft purple glow */
+}
+
+.alarm-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* The button to stop the sound */
+.stop-alarm-btn {
+  padding: 15px 40px;
+  background: #B19CD9; /* Matching your theme purple */
+  color: white;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.stop-alarm-btn:hover {
+  transform: scale(1.05);
+  background: #a088cc;
+}
