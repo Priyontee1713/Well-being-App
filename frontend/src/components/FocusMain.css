@@ -1,0 +1,84 @@
+/* Container for the entire setup page */
+.pc-setup-page, .timer-running-page-container {
+  background-color: transparent !important; /* Shows bg image */
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden !important;
+}
+
+
+
+.pc-setup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh; /* Centers the content vertically above your nav bar */
+  background-color: #F8F5F0; /* Matches your beige theme */
+  color: #2D1B4E;
+}
+
+/* THE FIX: Aligns Hours, Minutes, and Seconds side-by-side */
+.picker-main-ui {
+  display: flex;
+  flex-direction: row; /* Horizontal alignment */
+  gap: 40px; /* Space between the three columns */
+  margin-bottom: 50px;
+}
+
+/* Individual column styling for each time unit */
+.picker-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column-label {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.selection-num {
+  font-size: 64px; /* Large, clear numbers */
+  font-weight: bold;
+  color: #2D1B4E;
+  margin: 10px 0;
+}
+
+/* Arrow button styling */
+.arrow-icon {
+  background: #EEEBFF; /* Soft purple background */
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #9D72FF;
+  transition: background 0.2s;
+}
+
+.arrow-icon:hover {
+  background: #DED7FF;
+}
+
+/* Start Button styling */
+.start-btn-rect {
+  background: #9D72FF; /* Your accent purple */
+  color: white;
+  border: none;
+  padding: 16px 80px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(157, 114, 255, 0.3);
+  transition: transform 0.2s;
+}
+
+.start-btn-rect:hover {
+  transform: translateY(-2px);
+  background: #8A5CFF;
+}
