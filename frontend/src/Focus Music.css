@@ -1,0 +1,49 @@
+.view-container {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; 
+}
+
+/* FIX: Standout Navigation Bar */
+.desktop-nav {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Darker, more saturated Indigo for better visibility */
+  background: #e6752f; 
+  padding: 15px 70px;
+  border-radius: 100px;
+  display: flex;
+  gap: 60px;
+  z-index: 1000;
+  /* Increased glow effect */
+  box-shadow: 0 10px 40px rgba(79, 70, 229, 0.8), 0 0 20px rgba(255, 255, 255, 0.2); 
+  border: 2px solid rgba(55, 53, 53, 0.637);
+  backdrop-filter: blur(10px);
+}
+
+.desktop-nav button {
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  /* Higher contrast for inactive icons */
+  color: rgba(255, 255, 255, 0.6); 
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.desktop-nav button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.desktop-nav button.active {
+  color: #ffffff;
+  /* Stronger pop and shadow for active state */
+  transform: scale(1.3) translateY(-8px);
+  text-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 10px rgba(79, 70, 229, 1);
+}
